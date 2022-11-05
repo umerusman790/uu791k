@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h5&$o4mkhub)tc#a#)u-_^@t=07#=2$%$mcvxn8h-@l@4$t@s-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['uu790k.herokuapp.com', '127.0.0.1']
 
@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
     BASE_DIR /  'static'
 ]
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 MEDIA_ROOT = BASE_DIR / 'static/images/'
 # Default primary key field type
