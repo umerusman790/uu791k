@@ -1,6 +1,5 @@
 from cProfile import label
 import re
-from tkinter import N
 from unicodedata import category
 from django.shortcuts import render, redirect
 from sklearn.preprocessing import label_binarize
