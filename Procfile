@@ -1,1 +1,1 @@
-web: gunicorn spps.wsgi:application --log-file - 
+web: gunicorn spps.wsgi --log-file - 
