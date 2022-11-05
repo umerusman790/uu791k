@@ -45,8 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-     "whitenoise.middleware.WhiteNoiseMiddleware",
-
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,7 +126,7 @@ STATICFILES_DIRS = [
     BASE_DIR /  'static'
 ]
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 MEDIA_ROOT = BASE_DIR / 'static/images/'
 # Default primary key field type
