@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %} {% for file in files %}
+<div
+  class="activities__box"
+  style="width: max-content; display: inline-block; margin: 20px"
+>
+  <div
+    class="activities__boxContent"
+    style="margin-left: auto; margin-right: auto"
+  >
+    <p style="text-">
+      <a href="{{file.file.url}}">{{file.file}}</a>
+    </p>
+    {% comment %}
+    <div class="activities__boxRoomContent">{{message.body}}</div>
+    {% endcomment %}
+  </div>
+</div>
+{% endfor %} {% endblock content %}

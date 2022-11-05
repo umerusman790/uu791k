@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="profile-page layout layout--3">
+  <div class="container">
+    <!-- Topics Start -->
+    {% include 'base/component/browse_topic.html' %}
+    <!-- Topics End -->
+
+    <!-- Room List Start -->
+    <div class="roomList">
+      <div class="profile">
+        <div class="profile__avatar">
+          <div class="avatar avatar--large active">
+            <img src="{{user.avatar.url}}" alt='no image'/>
+          </div>
+        </div>
+        <div class="profile__info">
+          <p>@{{user.username}}</p>
+          {% if request.user == user %}
+          {% comment %} {% url 'update-user' %} {% endcomment %}
+          <a href="{% url 'update-user' %}" class="btn btn--main btn--pill">Edit Profile</a>
+          {% endif %}
+        </div>
+        <div class="profile__about">
+          <h3>About</h3>
+          <p>
+            {{user.bio}}
+          </p>
+        </div>
+      </div>
+
+      <div class="roomList__header">
+        <div>
+          <h2>Study Rooms Hosted by Spps</a>
+          </h2>
+        </div>
+      </div>
+      {% include 'base/component/feed_component.html' %}
+
+
+    </div>
+    <!-- Room List End -->
+
+    <!-- Activities Start -->
+    {% include 'base/component/recent_activity.html' %}
+    <!-- Activities End -->
+  </div>
+</main>
+{% endblock content %}

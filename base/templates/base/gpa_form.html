@@ -1,0 +1,218 @@
+{% extends 'base.html' %} {% block content %}
+<main class="gpa-form">
+  <div class="gpa-form-inner1">
+    <div class="gpa-form-inner2">
+      <div class="layout__boxHeader __modifier">
+        <div class="layout__boxTitle">
+          <a href="{{request.META.HTTP_REFERER}}">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>arrow-left</title>
+              <path
+                d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+              ></path>
+            </svg>
+          </a>
+          <h3>Performace Evaluation</h3>
+        </div>
+      </div>
+      <div class="layout__body">
+        <form class="form" action="" method="POST">
+          {% csrf_token %}
+
+          <div class="form__group">
+            <label for="room_name">Your Current CGPA?</label>
+            <input type="text" required name="A" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Your Fsc/Ics Marks percentage?</label>
+            <input type="text" required name="B" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Are you satisfied with your program selection?</label
+            >
+            <select required name="C">
+              <option value="">Select Your Option</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >What you did previously in intermediate?</label
+            >
+            <select required name="D">
+              <option value="">Select Your Option</option>
+              <option value="1">ICS (Physics)</option>
+              <option value="3">ICS (Stats)</option>
+              <option value="5">FSC (Pre-medical)</option>
+              <option value="2">FSC (Pre-engineering)</option>
+              <option value="4">A Level</option>
+              <option value="6">O Level</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Please mention your NTS score?</label>
+            <input type="text" required name="E" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Current semester</label>
+            <select required name="F">
+              <option value="">Select Your Option</option>
+              <!-- <option value="5">1 Semester</option> -->
+              <option value="6">2 Semester</option>
+              <option value="7">3 Semester</option>
+              <option value="4">4 Semester</option>
+              <option value="1">5 Semester</option>
+              <option value="2">6 Semester</option>
+              <option value="3">7 Semester</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="room_name">Do you love your subjects?</label>
+            <select required name="G">
+              <option value="">Select Your Level</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"> Kindly specify your Gender?</label>
+            <select required name="H">
+              <option value="">Select Your Option</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Your matric marks percentage?</label>
+            <input type="text" required name="I" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >What do you think are you polite in your dealings?</label
+            >
+            <select required name="J">
+              <option value="">Select Your Option</option>
+              <option value="5">None</option>
+              <option value="4">Very less</option>
+              <option value="2">Less</option>
+              <option value="3">Moderate</option>
+              <option value="1">Extremely</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Do you have any certificate or diploma in a specific subject?
+              Kindly mention the subject if you have any?</label
+            >
+            <select required name="K">
+              <option value="">Select Your Option</option>
+              <option value="1">No certificate</option>
+              <option value="2">Website development</option>
+              <option value="3">
+                Language ( C, C++, java, javascript, python, Data structures)
+              </option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Do you have a team player ability?</label>
+            <select required name="L">
+              <option value="">Select Your Option</option>
+              <option value="5">None</option>
+              <option value="3">Very less</option>
+              <option value="4">Less</option>
+              <option value="2">Moderate</option>
+              <option value="1">Extremely</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Do you borrow a book from Library?</label>
+            <select required name="M">
+              <option value="">Select Your Option</option>
+              <option value="1">Never</option>
+              <option value="2">Rarely</option>
+              <option value="5">Often</option>
+              <option value="3">Sometimes</option>
+              <option value="4">Always</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >How much time do you spend in the above activity in a day?</label
+            >
+            <select required name="N">
+              <option value="">Select Your Option</option>
+              <option value="2">Less than 1 hour</option>
+              <option value="3">Between 1 to 2 hours</option>
+              <option value="4">Between 2 to 3 hours</option>
+              <option value="3">Between 3 to 4 hours</option>
+              <option value="7">Between 4 to 5 hours</option>
+              <option value="5">Between 5 to 6 hours</option>
+              <option value="8">Between 6 to 7 hours</option>
+              <option value="10">Between 7 to 8 hours</option>
+              <option value="9">Between 9 to 10 hours</option>
+              <option value="6">More than 10 hours</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Are you paying your fees?</label>
+            <select required name="O">
+              <option value="">Select Your Option</option>
+              <option value="1">Yes</option>
+              <option value="4">Labour Quota</option>
+              <option value="2">On Scholar Ship</option>
+              <option value="3">No, Need Based Loan</option>
+            </select>
+          </div>
+
+          <!-- <div class="form__group">
+            <label for="room_topic">Topic</label>
+            <input required type="text" name="topic" id="room_topic" list="topic-list" />
+            <datalist id="topic-list">
+              <select id="room_topic">
+                <option value="">Select your topic</option>
+                <option value="Python">Python</option>
+                <option value="Django">Django</option>
+              </select>
+            </datalist>
+
+          </div> -->
+
+          <div class="form__action">
+            <a class="btn btn--dark" href="{{request.META.HTTP_REFERER}}"
+              >Cancel</a
+            >
+            <button class="btn btn--main" type="submit">Predict</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}

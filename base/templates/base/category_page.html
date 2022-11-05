@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% block content %}
+<main class="gpa-form">
+  <div class="gpa-form-inner1 gpa-form-inner1__modifier1">
+    <div class="gpa-form-inner2">
+      <div class="layout__boxHeader __modifier">
+        <div class="layout__boxTitle">
+          <a href="{{request.META.HTTP_REFERER}}">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>arrow-left</title>
+              <path
+                d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+              ></path>
+            </svg>
+          </a>
+          <h3>Heart Disease Prediction</h3>
+        </div>
+      </div>
+      <div class="layout__body">
+        Heart Disease Found ? :
+        <h5 style="display: inline-block; margin-left: 10px">{{category}}</h5>
+      </div>
+    </div>
+  </div>
+
+
+
+</main>
+
+{% endblock content %}
+
+
+
+
+
+
+
+{% comment %} {% for label,good_response, user_response in zipped %}
+  <div class="layout__comparison">
+    {% comment %} heading div {% endcomment %}
+    {% comment %} <div class="layout__comparison__heading">
+      <h3>{{label}}</h3>
+    </div>
+
+    <div class="layout__comparison__div">
+      <div class="layout__comparison__subdiv">
+        <div>Your response</div>
+        <div>{{user_response}}</div>
+      </div>
+
+      <div class="layout__comparison__subdiv">
+        <div>Good response</div>
+        <div>{{good_response}}</div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+{% comment %} {% endfor %}  {% endcomment %} 

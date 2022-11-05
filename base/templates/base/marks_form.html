@@ -1,0 +1,365 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<main class="gpa-form">
+  <div class="gpa-form-inner1">
+    <div class="gpa-form-inner2">
+      <div class="layout__boxHeader __modifier">
+        <div class="layout__boxTitle">
+          <a href="{{request.META.HTTP_REFERER}}">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>arrow-left</title>
+              <path
+                d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+              ></path>
+            </svg>
+          </a>
+          <h3>Hear Disease Prediction</h3>
+        </div>
+      </div>
+      <div class="layout__body">
+
+        <form class="form" action="" method="POST">
+          {% csrf_token %}
+
+      
+          <div class="form__group">
+            <label for="room_name">Please select your Constrictive pericarditis (CP)</label>
+            <select required name="CP">
+              <option value="">Select Your Option</option>
+              <!-- <option value="5">1 Semester</option> -->
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="room_name">Please select your restecg</label>
+            <select required name="RESTECG">
+              <option value="">Select Your Option</option>
+              <!-- <option value="5">1 Semester</option> -->
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="room_name">Please select your Calcium level</label>
+            <select required name="CA">
+              <option value="">Select Your Option</option>
+              <!-- <option value="5">1 Semester</option> -->
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="room_name">Please select your thalassemia level</label>
+            <select required name="THAL">
+              <option value="">Select Your Option</option>
+              <!-- <option value="5">1 Semester</option> -->
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+            </select>
+          </div>
+
+          <!-- <div class="form__group">
+            <label for="room_topic">Topic</label>
+            <input required type="text" name="topic" id="room_topic" list="topic-list" />
+            <datalist id="topic-list">
+              <select id="room_topic">
+                <option value="">Select your topic</option>
+                <option value="Python">Python</option>
+                <option value="Django">Django</option>
+              </select>
+            </datalist>
+
+          </div> -->
+
+          <div class="form__action">
+            <a class="btn btn--dark" href="{{request.META.HTTP_REFERER}}"
+              >Cancel</a
+            >
+            <button class="btn btn--main" type="submit">Predict</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% block content %}
+<main class="gpa-form">
+  <div class="gpa-form-inner1">
+    <div class="gpa-form-inner2">
+      <div class="layout__boxHeader __modifier">
+        <div class="layout__boxTitle">
+          <a href="{{request.META.HTTP_REFERER}}">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>arrow-left</title>
+              <path
+                d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+              ></path>
+            </svg>
+          </a>
+          <h3>Marks Category</h3>
+        </div>
+      </div>
+      <div class="layout__body">
+
+        <form class="form" action="" method="POST">
+          {% csrf_token %}
+
+          <div class="form__group">
+            <label for="room_name">Your Fsc/Ics Marks percentage?</label>
+            <input type="text" required name="A" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Current semester</label>
+            <select required name="B">
+              <option value="">Select Your Option</option>
+              <!-- <option value="5">1 Semester</option> -->
+              <option value="6">2 Semester</option>
+              <option value="7">3 Semester</option>
+              <option value="4">4 Semester</option>
+              <option value="1">5 Semester</option>
+              <option value="2">6 Semester</option>
+              <option value="3">7 Semester</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Please mention your NTS score?</label>
+            <input type="text" required name="C" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Your Current CGPA?</label>
+            <input type="text" required name="D" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Please select your father/guardian monthly Income from these
+              options</label
+            >
+            <select required name="E">
+              <option value="">Select Your Option</option>
+              <option value="6">Father don't do any job</option>
+              <option value="17">Less than 10k</option>
+              <option value="9">Between 10k to 25k</option>
+              <option value="7">Between 25k to 50k</option>
+              <option value="2">Between 50k to 75k</option>
+              <option value="1">Between 75k to 100k</option>
+              <option value="3">Between 100k to 150k</option>
+              <option value="4">Between 150k to 200k</option>
+              <option value="8">Between 200k to 250k</option>
+              <option value="5">Between 250k to 300k</option>
+              <option value="13">Between 300k to 350k</option>
+              <option value="18">Between 350k to 400k</option>
+              <option value="12">Between 400k to 450k</option>
+              <option value="16">Between 450k to 500k</option>
+              <option value="20">Between 500k to 550k</option>
+              <option value="14">Between 550k to 600k</option>
+              <option value="15">Between 600k to 650k</option>
+              <option value="19">Between 750k to 800k</option>
+              <option value="11">Between 950k to 1M</option>
+              <option value="10">More than 1 million</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"> Please select your monthly Income</label>
+            <select required name="F">
+              <option value="">Select Your Option</option>
+              <option value="2">Don't do freelancing</option>
+              <option value="4">Less than 10k</option>
+              <option value="1">Between 10k to 25k</option>
+              <option value="5">Between 25k to 50k</option>
+              <option value="6">Between 50k to 75k</option>
+              <option value="7">Between 75k to 100k</option>
+              <option value="3">Between 100k to 150k</option>
+              <option value="8">Between 150k to 200k</option>
+              <option value="9">More than 1 million</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Are you satisfied with your program selection?</label
+            >
+            <select required name="G">
+              <option value="">Select Your Option</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >What you did previously in intermediate?</label
+            >
+            <select required name="H">
+              <option value="">Select Your Option</option>
+              <option value="1">ICS (Physics)</option>
+              <option value="3">ICS (Stats)</option>
+              <option value="5">FSC (Pre-medical)</option>
+              <option value="2">FSC (Pre-engineering)</option>
+              <option value="4">A Level</option>
+              <option value="6">O Level</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Your matric marks percentage?</label>
+            <input type="text" required name="I" />
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Do you feel any risk of failing to Graduate in your
+              degree?</label
+            >
+            <select required name="J">
+              <option value="">Select Your Option</option>
+              <option value="1">Never</option>
+              <option value="3">Rarely</option>
+              <option value="5">Often</option>
+              <option value="2">Sometimes</option>
+              <option value="4">Always</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Kindly tell us does your family supports you in education?</label
+            >
+            <select required name="K">
+              <option value="">Select Your Option</option>
+              <option value="5">Never</option>
+              <option value="4">Rarely</option>
+              <option value="2">Often</option>
+              <option value="3">Sometimes</option>
+              <option value="1">Always</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name"
+              >Kindly select, how much time you spend on physical exercise e.g.,
+              gym, sports, running etc. ?</label
+            >
+            <select required name="L">
+              <option value="">Select Your Option</option>
+              <option value="4">None</option>
+              <option value="3">Very less</option>
+              <option value="1">Less</option>
+              <option value="2">Moderate</option>
+              <option value="5">Extremely</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="room_name">Love to socialize with other?</label>
+            <select required name="M">
+              <option value="">Select Your Option</option>
+              <option value="2">Often</option>
+              <option value="4">Rarely</option>
+              <option value="3">Always</option>
+              <option value="5">Never</option>
+              <option value="1">Sometimes</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Do you have depression of study?</label>
+            <select required name="N">
+              <option value="">Select Your Option</option>
+              <option value="1">Often</option>
+              <option value="3">Rarely</option>
+              <option value="2">Always</option>
+              <option value="4">Never</option>
+              <option value="5">Sometimes</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="room_name">Do you love your Domain?</label>
+            <select required name="O">
+              <option value="">Select Your Level</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="room_name">Do you love your subjects?</label>
+            <select required name="P">
+              <option value="">Select Your Level</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <!-- <div class="form__group">
+            <label for="room_topic">Topic</label>
+            <input required type="text" name="topic" id="room_topic" list="topic-list" />
+            <datalist id="topic-list">
+              <select id="room_topic">
+                <option value="">Select your topic</option>
+                <option value="Python">Python</option>
+                <option value="Django">Django</option>
+              </select>
+            </datalist>
+
+          </div> -->
+
+          <div class="form__action">
+            <a class="btn btn--dark" href="{{request.META.HTTP_REFERER}}"
+              >Cancel</a
+            >
+            <button class="btn btn--main" type="submit">Predict</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}  {% endcomment %}
