@@ -1,7 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
 <main class="layout layout--3">
-  <div class="container">
+  </main>
+
+{% endblock %}
+
+
+
+
+
+{% comment %} <div class="container">
     <!-- Topics Start -->
     {% include 'base/component/browse_topic.html' %}
 
@@ -28,9 +36,9 @@
           </label>
         </form>
         <div class="mobile-menuItems">
-          {% comment %} {% url 'topics' %} {% endcomment %}
+          {% url 'topics' %}   /// it 
           <a class="btn btn--main btn--pill" href="">Browse Topics</a>
-          {% comment %} {% url 'activity' %} {% endcomment %}
+          {% url 'activity' %}
           <a class="btn btn--main btn--pill" href="">Recent Activities</a>
         </div>
       </div>
@@ -66,7 +74,4 @@
     {% include 'base/component/recent_activity.html' %}
 
     <!-- Activities End -->
-  </div>
-</main>
-
-{% endblock %}
+  </div> {% endcomment %}

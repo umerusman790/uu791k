@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 :root {
-    --color-main: #6FB98F;
+    --color-main: #192838;
     --color-main-light: #e1f6fb;
-    --color-dark: #004445;
+    --color-dark: #27ced1;
     --color-dark-medium: #2C787C;
-    --color-dark-light: #6FB98F;
+    --color-dark-light: #8cb440;
     --color-light: #e5e5e5;
     --color-gray: #8b8b8b;
     --color-light-gray: #b2bdbd;
-    --color-bg: #021C1E;
-    --color-success: #5dd693;
+    --color-bg: #36276d;
+    --color-success: #c4c71d;
     --color-error: #fc4b0b;
 }
 
@@ -49,6 +49,7 @@ body {
     color: var(--color-light-gray);
     background-color: var(--color-bg);
     min-height: 100vh;
+    background-image: url('../images/pngegg.png');
 }
 
 img {
@@ -63,11 +64,25 @@ a {
 
 main.gpa-form {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     margin: 10px;
-    flex-direction: column;
+    /* flex-direction: column; */
+}
+
+main.gpa-form div h1 {
+    align-self: flex-start;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+main.gpa-form div p h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .gpa-form-inner1 {
@@ -79,11 +94,11 @@ main.gpa-form {
     border: 1px solid var(--color-light-gray);
     padding: 10px;
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 2px;
 }
 
 .__modifier {
-    border-radius: 20px;
+    border-radius: 2px;
 }
 
 .gpa-form-inner1__modifier1 {
@@ -135,6 +150,10 @@ main.gpa-form {
     max-width: 120rem;
     width: 90%;
     margin: auto;
+}
+
+.container> :last-child {
+    align-self: flex-end;
 }
 
 .btn {
@@ -1246,12 +1265,10 @@ main.gpa-form {
     font-weight: 1.4rem;
 }
 
-html body main.profile-page.layout.layout--2 div.container div.room div.room__box.scroll div.room__header.scroll span.room__topics a
-{
+html body main.profile-page.layout.layout--2 div.container div.room div.room__box.scroll div.room__header.scroll span.room__topics a {
     color: white;
 }
 
-html body main.profile-page.layout.layout--2 div.container div.room div.room__message form input
-{
+html body main.profile-page.layout.layout--2 div.container div.room div.room__message form input {
     color: white;
 }

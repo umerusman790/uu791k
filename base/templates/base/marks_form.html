@@ -2,6 +2,25 @@
 
 {% block content %}
 <main class="gpa-form">
+  <div >
+    <h1>Heart disease prediction system</h1>
+    <p>
+     <h2> Project Aim </h2>
+The purpose of this project is to predict the heart disease of a patient.<br> Output ‘1’ will show that the patient has heart disease and ‘0’ will show that the patient don not has heart disease.  
+<br><h2> input attributes: </h2>
+cp (Chest Pain Type)<br>
+restecg (resting electrocardiographic results)<br>
+ca (Number of major vessels)<br>
+thal (Thalium stress result)<br>
+
+<h2> output attributes: </h2>
+Target <br>
+‘1’ for (The patient has heart disease)<br>
+‘0’ (The patient do not has heart disease)	<br>
+
+    </p>
+  </div>
+  
   <div class="gpa-form-inner1">
     <div class="gpa-form-inner2">
       <div class="layout__boxHeader __modifier">
@@ -30,7 +49,7 @@
 
       
           <div class="form__group">
-            <label for="room_name">Please select your Constrictive pericarditis (CP)</label>
+            <label for="room_name">Constrictive pericarditis level</label>
             <select required name="CP">
               <option value="">Select Your Option</option>
               <!-- <option value="5">1 Semester</option> -->
@@ -41,7 +60,7 @@
             </select>
           </div>
           <div class="form__group">
-            <label for="room_name">Please select your restecg</label>
+            <label for="room_name"> restecg  results (0 = normal; 1 = having ST-T; 2 = hypertrophy</label>
             <select required name="RESTECG">
               <option value="">Select Your Option</option>
               <!-- <option value="5">1 Semester</option> -->
@@ -50,7 +69,7 @@
             </select>
           </div>
           <div class="form__group">
-            <label for="room_name">Please select your Calcium level</label>
+            <label for="room_name"> Calcium level</label>
             <select required name="CA">
               <option value="">Select Your Option</option>
               <!-- <option value="5">1 Semester</option> -->
@@ -61,7 +80,7 @@
             </select>
           </div>
           <div class="form__group">
-            <label for="room_name">Please select your thalassemia level</label>
+            <label for="room_name">thalassemia level</label>
             <select required name="THAL">
               <option value="">Select Your Option</option>
               <!-- <option value="5">1 Semester</option> -->

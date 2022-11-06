@@ -427,7 +427,7 @@ def predict_category(request):
 
         print(user_values)
         category = model.predict([user_values])
-        text = 'Yes, Please see docotor immediately' if category[0] == 1 else 'NO, Congratulations'
+        text = 'Yes' if category[0] == 1 else 'NO'
         context = {'category': text}
 
         return render(request, 'base/category_page.html', context)

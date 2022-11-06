@@ -2,10 +2,10 @@
 <header class="header header--loggedIn">
   <div class="container">
     <a href="{% url 'home' %}" class="header__logo">
-      <img src="{% static 'images/logo_final0.1.png' %}" />
-      <h1>SPPS</h1>
+      <img src="{% static 'images/female-student-having-a-brilliant-idea-cartoon-vector-39425157.jpg' %}" />
+      <h1>Heart Disease Predictiion System</h1>
     </a>
-    <form class="header__search" method="GET" action="{% url 'home' %}">
+    {% comment %} <form class="header__search" method="GET" action="{% url 'home' %}">
       <label>
         <svg
           version="1.1"
@@ -21,12 +21,12 @@
         </svg>
         <input name="q" placeholder="Search for posts" />
       </label>
-    </form>
-    <a class="btn btn--main" href="{% url 'predict-gpa' %}">
+    </form> {% endcomment %}
+    {% comment %} <a class="btn btn--main" href="{% url 'predict-gpa' %}">
      
       Predict GPA
-    </a>
-    <a class="btn btn--main" href="{% url 'predict-category' %}">
+    </a> {% endcomment %}
+    <a class="btn btn--main hunger" href="{% url 'predict-category' %}">
      
       Predict Heart Disease
     </a>
@@ -34,11 +34,11 @@
      
       OOP GPA
     </a> {% endcomment %}
-    <nav class="header__menu">
+    {% comment %} <nav class="header__menu">
       <!-- Logged In -->
       {% if request.user.is_authenticated %}
       <div class="header__user">
-        {% comment %} {% url 'update-user' %} {% endcomment %}
+        {% url 'update-user' %}
         <a href="{% url 'update-user' %}">
           <div class="avatar avatar--medium active">
             <img src="{{request.user.avatar.url}}" />
@@ -104,7 +104,7 @@
           Logout</a
         >
       </div>
-    </nav>
+    </nav> {% endcomment %}
   </div>
 </header>
 
